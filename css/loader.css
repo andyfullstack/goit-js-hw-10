@@ -1,6 +1,8 @@
 /* Loader ver.#1 */
 .loader {
-    /* position: relative; */
+    margin-top: 25%;
+    margin-left: 50%;
+    display: flex;
     width: 120px;
     height: 140px;
     background-image: radial-gradient(circle 30px, #111 100%, transparent 0),
@@ -91,52 +93,85 @@
 
 /* Loader ver.#3 */
 /* ============================================================== */
-/* 
-.loader {
-    width: 106px;
-    height: 56px;
-    display: block;
-    margin: 30px auto;
-    background-image: linear-gradient(#111 50px, transparent 0), linear-gradient(#111 50px, transparent 0), linear-gradient(#111 50px, transparent 0), linear-gradient(#111 50px, transparent 0), radial-gradient(circle 14px, #111 100%, transparent 0);
-    background-size: 48px 15px, 15px 35px, 15px 35px, 25px 15px, 28px 28px;
-    background-position: 25px 5px, 58px 20px, 25px 17px, 2px 37px, 76px 0px;
-    background-repeat: no-repeat;
+
+/* .loader {
     position: relative;
-    transform: rotate(-45deg);
-    box-sizing: border-box;
+    display: flex;
 
-}
-
-.loader::after,
-.loader::before {
-    content: '';
-    position: absolute;
-    width: 56px;
-    height: 56px;
-    border: 6px solid #111;
-    border-radius: 50%;
-    left: -45px;
-    top: -10px;
+    margin-left: 50%;
+    margin-top: 25%;
+    width: 130px;
+    height: 100px;
     background-repeat: no-repeat;
-    background-image: linear-gradient(#111 64px, transparent 0), linear-gradient(#111 66px, transparent 0), radial-gradient(circle 4px, #111 100%, transparent 0);
-    background-size: 40px 1px, 1px 40px, 8px 8px;
-    background-position: center center;
-    box-sizing: border-box;
-    animation: rotation 0.3s linear infinite;
+    background-image: linear-gradient(#0277bd, #0277bd),
+        linear-gradient(#29b6f6, #4fc3f7), linear-gradient(#29b6f6, #4fc3f7);
+    background-size: 80px 70px, 30px 50px, 30px 30px;
+    background-position: 0 0, 80px 20px, 100px 40px;
 
 }
 
-.loader::before {
-    left: 25px;
-    top: 60px;
+.loader:after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    background: #562c90;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 10px solid #000;
+    box-shadow: 78px 0 0 -10px #562c90, 78px 0 #000;
+    animation: wheelSk 0.75s ease-in infinite alternate;
 }
 
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
+.loader:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0px;
+    height: 70px;
+    width: 70px;
+    background-image: linear-gradient(#562c90 45px, transparent 0),
+        linear-gradient(#562c90 45px, transparent 0),
+        linear-gradient(#562c90 45px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 30px 4px;
+    background-position: 0px 11px, 8px 35px, 0px 60px;
+    animation: lineDropping 0.75s linear infinite;
+}
+
+@keyframes wheelSk {
+
+    0%,
+    50%,
+    100% {
+        transform: translatey(0)
     }
 
+    30%,
+    90% {
+        transform: translatey(-3px)
+    }
+}
+
+@keyframes lineDropping {
+    0% {
+        background-position: 100px 11px, 115px 35px, 105px 60px;
+        opacity: 1;
+    }
+
+    50% {
+        background-position: 0px 11px, 20px 35px, 5px 60px
+    }
+
+    60% {
+        background-position: -30px 11px, 0px 35px, -10px 60px
+    }
+
+    75%,
     100% {
-        transform: rotate(360deg);
+        background-position: -30px 11px, -30px 35px, -30px 60px;
+        opacity: 0;
     }
 } */

@@ -1,3 +1,11 @@
+.loader-text {
+    font-size: 30px;
+    padding-left: 130px;
+    justify-content: center;
+    text-align: center;
+
+}
+
 .cat-info {
     display: flex;
     flex-wrap: wrap;

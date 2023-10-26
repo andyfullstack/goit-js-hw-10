@@ -25,7 +25,7 @@ fetchBreeds()
     new SlimSelect({
       select: select,
       settings: {
-        placeholderText: 'Just chose a cat...',
+        placeholderText: 'Just chose a cat please...',
       },
     });
   })
